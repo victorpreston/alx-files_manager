@@ -48,7 +48,7 @@ Environment variables you can adjust when running the express server
 ## Documentation
 
 The API's documentation is available at
-[here]()
+[here](https://file-manager-api-documentation.vercel.app/)
 
 ## Tests
 
