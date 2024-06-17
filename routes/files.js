@@ -16,7 +16,7 @@ filesRouter.use(authenticateToken);
  * @apiDefine XToken
  * @apiHeader {String} X-Token Users access token
  * @apiHeaderExample Header-Example:
- * "X-Token": "a57826f0-c383-4013-b29e-d18c2e68900d"
+ * "": ""
  */
 
 /**
