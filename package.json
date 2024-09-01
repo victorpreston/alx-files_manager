@@ -2,7 +2,7 @@
   "name": "files_manager",
   "version": "1.0.0",
   "description": "A simple file management API built with Node.js.",
-  "author": "Bezaleel Olakunori <bezaleeloci@gmail.com>",
+  "author": "Victor Preston",
   "license": "MIT",
   "private": true,
   "main": "server.js",
@@ -55,12 +55,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/B3zaleel/alx-files_manager"
+    "url": "https://github.com/victorpreston/alx-files_manager"
   },
   "bugs": {
-    "url": "https://github.com/B3zaleel/alx-files_manager/issues"
+    "url": "https://github.com/victorpreston/alx-files_manager/issues"
   },
-  "homepage": "https://github.com/B3zaleel/alx-files_manager/blob/main/README.md",
+  "homepage": "https://github.com/victorpreston/alx-files_manager/blob/main/README.md",
   "engines": {
     "node": "16.x",
     "npm": "8.x",
