@@ -1,73 +1,47 @@
-# 0x04. Files manager
->REST API for managing and sharing files
+# Files Manager
 
-Simple file management API that allows users to:
+[![Coverage Status](https://coveralls.io/repos/github/B3zaleel/alx-files_manager/badge.svg?branch=main)](https://coveralls.io/github/B3zaleel/alx-files_manager?branch=main)
 
-- Upload files
-- Retrieve information about the files
-- Download the files
-- Share uploaded files with other users
+A simple file management API built with Express, MongoDB, Redis, Bull, and Node.js.
 
-## How to Run
+## Requirements
 
-Clone the repo
+### Applications
 
-```
-git clone https://github.com/victorpreston/alx-files_manager.git
-```
++ Node.js
++ Yarn (the package manager/resource negotiator)
 
-Install required dependencies
+### APIs
 
-```
-cd alx-files_manager
-npm install
-```
++ A Google API should be created with at least an email sending scope and a valid URL (e.g.; `http://localhost:5000/`) should be one of the redirect URIs. The `credentials.json` file should be stored in the root directory of this project.
 
-Start worker
+### Environment Variables
 
-```
-npm run start-worker
-```
+The required environment variables should be stored in a file named `.env` and each line should have the format `Name=Value`. The table below lists the environment variables that will be used by this server:
 
-Start express server
+| Name | Required | Description |
+|:-|:-|:-|
+| GOOGLE_MAIL_SENDER | Yes | The email address of the account responsible for sending emails to users. |
+| PORT | No (Default: `5000`)| The port the server should listen at. |
+| DB_HOST | No (Default: `localhost`)| The database host. |
+| DB_PORT | No (Default: `27017`)| The database port. |
+| DB_DATABASE | No (Default: `files_manager`)| The database name. |
+| FOLDER_PATH | No (Default: `/tmp/files_manager` (Linux, Mac OS X) & `%TEMP%/files_manager` (Windows)) | The local folder where files are saved. |
 
-```
-npm run start-server
-```
+## Installation
 
-## Environment
++ Clone this repository and switch to the cloned repository's directory.
++ Install the packages using `yarn install` or `npm install`.
 
-Environment variables you can adjust when running the express server
+## Usage
 
-- `PORT`: express server's port
-- `DB_HOST`: mongodb's server host address
-- `DB_PORT`: mongodb's port
-- `DB_DATABASE`: database to use
-- `FOLDER_PATH`: absolute path to folder to store files
-
-## Documentation
-
-The API's documentation is available at
-[here](https://file-manager-api-documentation.vercel.app/)
+Start the Redis and MongoDB services on your system and run `yarn start-server` or `npm run start-server`.
 
 ## Tests
 
-Specify different `DB_DATABASE` and `FOLDER_PATH` environment when running test
-to avoid data loss in main database and folder. Check out [test](tests/) folder
-for unit tests.
++ Create a separate `.env` file for the tests named `.env.test` and store the value of the environment variables for the testing event in it.
++ Run `yarn test` or `npm run test` to execute the E2E tests.
 
-- Run specific test
+## Documentation
 
-```
-DB_DATABASE='test_database' FOLDER_PATH='/tmp/test_folder' npm test tests/testFile.js
-```
-
-- Run all tests
-
-```
-DB_DATABASE='test_database' FOLDER_PATH='/tmp/test_folder' npm run test-all
-```
-
-## Authors
-
-- [Victor Preston](https://github.com/victorpreston)
++ TODO: Generate OpenAPI documentation with [**apidoc**](https://www.npmjs.com/package/apidoc).
