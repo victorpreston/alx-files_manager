@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import fs from 'fs';
 import readline from 'readline';
 import { promisify } from 'util';
