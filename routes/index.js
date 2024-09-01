@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import { Express } from 'express';
 import AppController from '../controllers/AppController';
 import AuthController from '../controllers/AuthController';
